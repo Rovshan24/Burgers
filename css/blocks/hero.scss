@@ -1,0 +1,48 @@
+.hero {
+  background: url('../img/back/salad.jpg') center center / cover no-repeat,
+              url('../img/back/texture.png') center center / cover no-repeat;
+  background-color:  rgba(20, 20, 20, 0.3);
+  background-blend-mode: difference;
+  padding: 15px 0 40px 0;
+
+  .hero__container {
+    justify-content: space-between;
+    flex: 1;
+  }
+}
+  
+.hero__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+.hero__buttons {
+  display: flex;
+  align-items: center;
+  margin-left: 70px;
+}
+  
+.hero__btn {
+  margin-left: 15px;
+}
+  
+.hero__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 0.75;
+}
+
+.hero__burger {
+  margin-right: 15px;
+}
+
+.hero__text {
+  font-family: "lifehack";
+  font-size: 65px;
+  line-height: 85px;
+  letter-spacing: -1.63px;
+  font-weight: 500;
+  text-transform: lowercase;
+}

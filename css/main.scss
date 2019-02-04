@@ -1,0 +1,28 @@
+
+/* reser */
+@import "layout/custom-reset.scss";
+
+/* setups */
+@import "layout/fonts.scss";
+@import "layout/base.scss";
+
+
+/* common */
+@import "blocks/common/button.scss";
+@import "blocks/common/pointer.scss";
+@import "blocks/common/arrow.scss";
+@import "blocks/common/title.scss";
+@import "blocks/common/subtitle.scss";
+
+/* blocks */
+@import "blocks/hero.scss";
+@import "blocks/nav.scss";
+@import "blocks/we.scss";
+@import "blocks/team.scss";
+@import "blocks/menu.scss";
+@import "blocks/reviews.scss";
+@import "blocks/order.scss";
+@import "blocks/map.scss";
+@import "blocks/footer.scss";
+@import "blocks/contacts.scss";
+@import "blocks/socials.scss";

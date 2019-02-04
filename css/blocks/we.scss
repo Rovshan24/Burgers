@@ -1,0 +1,51 @@
+.we {
+  background: url('../img/back/bred.jpg')center center / cover no-repeat #f5f2ed;
+  text-align: center;
+}
+
+.we__title {
+  margin-bottom: 55px;
+}
+
+.we__list {
+  display: flex;
+}
+
+.we__item {
+  flex: 1;
+  margin-right: 20px;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.we__image {
+  display: inline-block;
+  width: 100px;
+  height: 90px;
+  margin-bottom: 30px;
+}
+
+@each $image in (meat, hand, natural) {
+  .we__image_#{$image} {
+    background: url('../icons/#{$image}.svg') center center no-repeat;
+  }
+}
+
+.we__subtitle {
+  font-family: "lifehack";
+  font-size: 24px;
+  letter-spacing: -0.6px;
+  color: #2f3234;
+  margin-bottom: 24px;
+
+  &_mb_13 {
+    margin-bottom: 13px;
+  }
+}
+
+.we__text {
+  line-height: 24px;
+  color: rgba(47, 50, 52, 0.8);
+}
