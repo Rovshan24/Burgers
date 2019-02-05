@@ -25,6 +25,17 @@
     .reviews__content {
       opacity: 1;
     }
+
+    @include phones {
+      .reviews__text {
+        display: none;
+      }
+    }
+  }
+
+  @include tablets {
+    width: 50%;
+    height: 25%;
   }
 }
 
@@ -36,21 +47,36 @@
   bottom: 0;
   
   background: rgba(#2f3234, 0.5);
-  padding: 50px 20px;
+  padding: rem(50px) rem(20px);
 
   opacity: 0;
   transition: opacity .3s;
+
+  @include tablets {
+    padding: rem(20px) rem(45px) rem(20px) rem(45px);
+    text-align: center;
+  }
+
+  @include phones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .reviews__subtitle {
-  margin-bottom: 30px;
+  margin-bottom: rem(30px);
+
+  @include tablets {
+    margin-bottom: rem(15px);
+  }
 }
 
 .reviews__text {
-  line-height: 24px;
-  margin-bottom: 15px;
+  line-height: rem(24px);
+  margin-bottom: rem(15px);
 }
 
 .reviews__btn {
-  padding: 10px 10px;
+  padding: rem(10px) rem(10px);
 }

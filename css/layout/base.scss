@@ -1,5 +1,13 @@
 html {
   font-size: 16px;
+
+  @include tablets() {
+    font-size: 14px;
+  }
+
+  @include phones() {
+    font-size: 12px;
+  }
 }
 
 body {
@@ -9,26 +17,12 @@ body {
   font-weight: 300;
 }
 
-// Медиа запросы
-
-@media (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  html {
-    font-size: 12px;
-  }
-}
-
 /* Позиционирование и Блочная модель */
 
 .wrapper {
   overflow: hidden;
   width: 100%;
-  min-width: 58.75rem;
+  // min-width: 58.75rem;
   min-height: 100%;
 }
 
@@ -47,7 +41,8 @@ body {
 }
 
 .container {
-  width: 940px;
+  max-width: 940px;
+  width: 95%;
   margin: 0 auto;
 }
 

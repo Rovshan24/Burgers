@@ -5,14 +5,18 @@
 
 .menu__title {
   position: absolute;
-  margin-top: 110px;
-  margin-left: 100px;
+  margin-top: 5%;
+  margin-left: 5%;
 }
 
 .menu__accordeon {
   position: absolute;
   right: 0;
   height: 100%;
+
+  @include tablets {
+    width: 75%;
+  }
 }
 
 .menu__list {
@@ -23,6 +27,39 @@
 .menu__item {
   display: flex;
   height: 100%;
+
+  @include tablets {
+    display: none;
+  }
+
+  &_active {
+
+    @include tablets {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    .menu__desc {
+      min-width: 0;
+    }
+    
+    .menu__subtitle {
+      color: #f9b43b;
+    }
+  
+    .menu__desc-wrap {
+      width: rem(540px);
+
+      @include tablets {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @each $back in (meat, vegan, diet) {
@@ -36,7 +73,7 @@
   display: flex;
   align-items: flex-end;
   height: 100%;
-  width: 80px;
+  width: rem(80px);
 
   &::before {
     position: absolute;
@@ -48,20 +85,22 @@
     height: 100%;
     background-color: rgba(20, 20, 20, 0.7);
   }
+
+  @include tablets {
+    width: rem(60px);
+  }
 }
 
 .menu__subtitle {
   display: block;
   transform-origin: 0 100%;
-  transform: rotate(-90deg) translate(40px, 150%);
+  transform: rotate(-90deg) translate(rem(40px), 150%);
   white-space: nowrap;
   font-family: "gagalin";
-  font-size: 40px;
-}
+  font-size: rem(40px);
 
-.menu__item_active {
-  .menu__subtitle {
-    color: #f9b43b;
+  @include tablets {
+    font-size: rem(30px);
   }
 }
 
@@ -70,19 +109,13 @@
   width: 0;
 }
 
-.menu__item_active {
-  .menu__desc-wrap {
-    width: 540px;
-  }
-}
-
 .menu__desc {
   height: 100%;
   background-color: rgba(20, 20, 20, 0.7);
-  padding: 60px 35px;
+  padding: 10%;
 }
 
 .menu__text {
-  line-height: 24px;
+  line-height: rem(24px);
   font-weight: 300;
 }

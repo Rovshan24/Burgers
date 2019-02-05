@@ -20,29 +20,38 @@
               </a>
             </div>
             <div class="hero__buttons">
-              <nav class="nav">
-                <ul class="nav__list">
-                  <li class="nav__item">
-                    <a class="nav__link" href="#">О нас</a>
-                  </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#">Бургеры</a>
-                  </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#">Команда</a>
-                  </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#">Меню</a>
-                  </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#">Отзывы</a>
-                  </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#">Контакты</a>
-                  </li>
-                </ul>
-              </nav>
-              <a class="btn btn_bg_orange hero__btn" href="#">Заказать</a>
+              <div class="hero__nav">
+                <nav class="nav">
+                  <ul class="nav__list">
+                    <li class="nav__item">
+                      <a class="nav__link" href="#">О нас</a>
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="#">Бургеры</a>
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="#">Команда</a>
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="#">Меню</a>
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="#">Отзывы</a>
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="#">Контакты</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="hero__links">
+                <a class="btn btn_bg_orange hero__btn" href="#">Заказать</a>
+                <a class="hamburger-menu" href="#">
+                  <div class="hamburger-menu__bars"></div>
+                  <div class="hamburger-menu__bars"></div>
+                  <div class="hamburger-menu__bars"></div>
+                </a>
+              </div>
             </div>
           </div>
           <div class="hero__bottom">
@@ -68,21 +77,33 @@
           <h2 class="title title_c_black we__title">Мы лучшие</h2>
           <ul class="we__list">
             <li class="we__item">
-              <div class="we__image we__image_meat"></div>
+              <div class="we__image">
+                <svg class="we__icon">
+                  <use xlink:href="./icons/sprite.svg#meat"></use>
+                </svg>
+              </div>
               <div class="we__content">
                 <h3 class="we__subtitle">100% свежее мясо</h3>
                 <p class="we__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
               </div>
             </li>
             <li class="we__item">
-              <div class="we__image we__image_hand"></div>
+              <div class="we__image">
+                <svg class="we__icon">
+                  <use xlink:href="./icons/sprite.svg#hand"></use>
+                </svg>
+              </div>
               <div class="we__content">
                 <h3 class="we__subtitle">Ручная  сборка</h3>
                 <p class="we__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
               </div>
             </li>
             <li class="we__item">
-              <div class="we__image we__image_natural"></div>
+              <div class="we__image">
+                <svg class="we__icon">
+                  <use xlink:href="./icons/sprite.svg#natural"></use>
+                </svg>
+              </div>
               <div class="we__content">
                 <h3 class="we__subtitle we__subtitle_mb_13">Натуральные ингредиенты</h3>
                 <p class="we__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
@@ -312,7 +333,7 @@
                   <textarea class="form__textarea" type="text" name="comment"></textarea>
                 </label>
               </div>
-              <div class="form__row">
+              <div class="form__row form__row_center form__row_mb_27">
                 <label class="form__label form__label_row">
                   <input class="form__radio" type="radio" value="cash" name="payment">
                   <span class="form__fake-radio"></span>
@@ -324,14 +345,14 @@
                   <span class="form__name form__name_mb_0">Оплата по карте</span>
                 </label>
               </div>
-              <div class="form__row">
+              <div class="form__row form__row_center form__row_mb_40">
                 <label class="form__label form__label_row">
                   <input class="form__checkbox" type="checkbox" value="no-call" checked>
                   <span class="form__fake-checkbox"></span>
                   <span class="form__name form__name_mb_0">Не перезванивать</span>
                 </label>
               </div>
-              <div class="form__row">
+              <div class="form__row form__row-button">
                 <input class="form__submit btn btn_bg_orange" type="submit" value="Заказать">
                 <input class="form__reset" type="reset" value="Очистить">
               </div>

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
 
-  font-size: 13px;
+  font-size: rem(13px);
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -14,11 +14,11 @@
   &::after {
     display: inline-block;
     content: "";
-    width: 5px;
-    height: 5px;
+    width: rem(5px);
+    height: rem(5px);
     border-radius: 50%;
     background: #fff;
-    margin: 0 15px;
+    margin: 0 rem(15px);
   }
 
   &:last-child {

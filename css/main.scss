@@ -1,11 +1,16 @@
+// breakpoints
+$tablets: 768px;
+$phones: 480px;
 
 /* reser */
 @import "layout/custom-reset.scss";
 
+// media
+@import "layout/media.scss";
+
 /* setups */
 @import "layout/fonts.scss";
 @import "layout/base.scss";
-
 
 /* common */
 @import "blocks/common/button.scss";
@@ -17,6 +22,7 @@
 /* blocks */
 @import "blocks/hero.scss";
 @import "blocks/nav.scss";
+@import "blocks/hamburger-menu.scss";
 @import "blocks/we.scss";
 @import "blocks/team.scss";
 @import "blocks/menu.scss";

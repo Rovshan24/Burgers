@@ -1,0 +1,18 @@
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: rem(25px);
+  margin-left: rem(30px);
+
+  @include tablets() {
+    display: flex;
+  }
+}
+
+.hamburger-menu__bars {
+  width: rem(25px);
+  height: rem(5px);
+  border-radius: rem(3px);
+  background: #fff;
+}
