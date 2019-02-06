@@ -25,12 +25,6 @@
     .reviews__content {
       opacity: 1;
     }
-
-    @include phones {
-      .reviews__text {
-        display: none;
-      }
-    }
   }
 
   @include tablets {
@@ -53,7 +47,7 @@
   transition: opacity .3s;
 
   @include tablets {
-    padding: rem(20px) rem(45px) rem(20px) rem(45px);
+    margin: 0 auto;
     text-align: center;
   }
 
@@ -75,8 +69,8 @@
 .reviews__text {
   line-height: rem(24px);
   margin-bottom: rem(15px);
-}
-
-.reviews__btn {
-  padding: rem(10px) rem(10px);
+  
+  @include phones {
+    display: none;
+  }
 }

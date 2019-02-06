@@ -341,12 +341,12 @@ body {
 /* common */
 .btn {
   display: inline-flex;
+  justify-content: center;
   padding: 0.625rem 0.9375rem;
   border-radius: 5px;
   font-weight: 500;
   font-size: 0.8125rem;
-  text-transform: uppercase;
-  text-align: center; }
+  text-transform: uppercase; }
 
 .btn_bg_orange {
   background: #e45028; }
@@ -431,9 +431,6 @@ body {
   background-color: rgba(20, 20, 20, 0.3);
   background-blend-mode: difference;
   padding: 0.9375rem 0 2.5rem 0; }
-  @media screen and (max-width: 768px) {
-    .hero {
-      height: 64rem; } }
   .hero .hero__container {
     justify-content: space-between;
     flex: 1; }
@@ -484,8 +481,10 @@ body {
   padding-top: 6.25rem; }
   @media screen and (max-width: 768px) {
     .hero__content {
-      padding: 2.5rem 3.75rem 0 3.75rem;
       text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .hero__content {
+      padding-top: 3.125rem; } }
 
 .hero__text {
   font-family: "lifehack";
@@ -494,6 +493,9 @@ body {
   letter-spacing: -0.10187rem;
   font-weight: 500;
   text-transform: lowercase; }
+  @media screen and (max-width: 768px) {
+    .hero__text {
+      padding: 0 6.25rem; } }
   @media screen and (max-width: 480px) {
     .hero__text {
       font-size: 3.375rem; } }
@@ -546,13 +548,13 @@ body {
   display: flex; }
   @media screen and (max-width: 480px) {
     .we__list {
-      flex-direction: column;
-      padding: 0 2.5rem; } }
+      flex-direction: column; } }
 
 .we__item {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-right: 1.25rem; }
   .we__item:last-child {
     margin-right: 0; }
@@ -560,24 +562,24 @@ body {
     .we__item {
       flex-direction: row;
       margin-right: 0;
-      margin-bottom: 3.125rem; } }
+      margin-bottom: 3.125rem; }
+      .we__item:last-child {
+        margin-bottom: 0; } }
 
 .we__image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex: 1;
   height: 6.25rem;
   margin-bottom: 35px; }
+  @media screen and (max-width: 480px) {
+    .we__image {
+      margin-bottom: 0; } }
 
-.we__icon {
-  width: 90%;
-  height: 6.25rem; }
-  .we__icon svg {
-    max-width: 95%; }
-
-@media screen and (max-width: 480px) {
-  .we__content {
-    text-align: left; } }
+.we__content {
+  flex: 2; }
+  @media screen and (max-width: 480px) {
+    .we__content {
+      text-align: left;
+      margin-left: 25px; } }
 
 .we__subtitle {
   font-family: "lifehack";
@@ -663,8 +665,7 @@ body {
     .accordeon__desc {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      padding: 0 10.3125rem 0 10.3125rem; } }
+      align-items: center; } }
   @media screen and (max-width: 480px) {
     .accordeon__desc {
       padding: 0 5.15625rem 0 5.15625rem; } }
@@ -706,10 +707,11 @@ body {
 .menu__accordeon {
   position: absolute;
   right: 0;
+  top: 0;
   height: 100%; }
   @media screen and (max-width: 768px) {
     .menu__accordeon {
-      width: 75%; } }
+      width: 100%; } }
 
 .menu__list {
   display: flex;
@@ -718,10 +720,10 @@ body {
 .menu__item {
   display: flex;
   height: 100%; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     .menu__item {
       display: none; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     .menu__item_active {
       display: flex;
       position: absolute;
@@ -764,7 +766,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(20, 20, 20, 0.7); }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     .menu__trigger {
       width: 3.75rem; } }
 
@@ -775,7 +777,7 @@ body {
   white-space: nowrap;
   font-family: "gagalin";
   font-size: 2.5rem; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     .menu__subtitle {
       font-size: 1.875rem; } }
 
@@ -791,6 +793,26 @@ body {
 .menu__text {
   line-height: 1.5rem;
   font-weight: 300; }
+
+.close {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 15px; }
+  .close::before, .close::after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 4px;
+    background: #c1c2c2;
+    border-radius: 2px; }
+  .close::before {
+    transform: rotate(-45deg) translate(14px, 14px); }
+  .close::after {
+    transform: rotate(45deg); }
+  @media screen and (max-width: 480px) {
+    .close {
+      display: flex; } }
 
 .reviews {
   position: relative;
@@ -813,9 +835,6 @@ body {
   filter: grayscale(1); }
   .reviews__item:hover .reviews__content {
     opacity: 1; }
-  @media screen and (max-width: 480px) {
-    .reviews__item:hover .reviews__text {
-      display: none; } }
   @media screen and (max-width: 768px) {
     .reviews__item {
       width: 50%;
@@ -833,7 +852,7 @@ body {
   transition: opacity .3s; }
   @media screen and (max-width: 768px) {
     .reviews__content {
-      padding: 1.25rem 2.8125rem 1.25rem 2.8125rem;
+      margin: 0 auto;
       text-align: center; } }
   @media screen and (max-width: 480px) {
     .reviews__content {
@@ -850,9 +869,9 @@ body {
 .reviews__text {
   line-height: 1.5rem;
   margin-bottom: 0.9375rem; }
-
-.reviews__btn {
-  padding: 0.625rem 0.625rem; }
+  @media screen and (max-width: 480px) {
+    .reviews__text {
+      display: none; } }
 
 .order {
   background: url("../img/back/order.jpg") center center/cover no-repeat, url("../img/back/texture-order.png") center center/cover no-repeat;

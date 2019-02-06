@@ -5,10 +5,6 @@
   background-blend-mode: difference;
   padding: rem(15px) 0 rem(40px) 0;
 
-  @include tablets {
-    height: rem(1024px);
-  }
-
   .hero__container {
     justify-content: space-between;
     flex: 1;
@@ -72,8 +68,11 @@
   padding-top: rem(100px);
 
   @include tablets {
-    padding: rem(40px) rem(60px) 0 rem(60px);
     text-align: center;
+  }
+
+  @include phones {
+    padding-top: rem(50px);
   }
 }
 
@@ -84,6 +83,10 @@
   letter-spacing: rem(-1.63px);
   font-weight: 500;
   text-transform: lowercase;
+
+  @include tablets {
+    padding: 0 rem(100px);
+  }
 
   @include phones {
     font-size: rem(54px);

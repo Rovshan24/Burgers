@@ -12,7 +12,7 @@
 
   @include phones {
     flex-direction: column;
-    padding: 0 rem(40px);
+    // padding: 0 rem(40px);
   }
 }
 
@@ -20,6 +20,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-right: rem(20px);
   
   &:last-child {
@@ -30,28 +31,28 @@
     flex-direction: row;
     margin-right: 0;
     margin-bottom: rem(50px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
 .we__image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex: 1;
   height: rem(100px);
   margin-bottom: 35px;
-}
 
-.we__icon {
-  width: 90%;
-  height: rem(100px);
-  svg {
-    max-width: 95%;
+  @include phones {
+    margin-bottom: 0;
   }
 }
 
 .we__content {
+  flex: 2;
   @include phones {
     text-align: left;
+    margin-left: 25px;
   }
 }
 
