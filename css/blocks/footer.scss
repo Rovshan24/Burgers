@@ -5,7 +5,7 @@
   bottom: 0;
   width: 100%;
   height: rem(60px);
-  background: url('../../img/back/order.jpg') center center / cover no-repeat #2f3234;
+  background: url('../img/back/order.jpg') center center / cover no-repeat #2f3234;
 
   @include phones {
     height: rem(120px);
