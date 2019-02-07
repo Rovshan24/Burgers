@@ -78,3 +78,17 @@
     display: none;
   }
 }
+
+.reviews__btn {
+  @include phones {
+    display: none;
+  }
+}
+
+.reviews__btn_phones {
+  display: none;
+
+  @include phones {
+    display: flex;
+  }
+}

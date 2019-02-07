@@ -881,6 +881,16 @@ body {
     .reviews__text {
       display: none; } }
 
+@media screen and (max-width: 480px) {
+  .reviews__btn {
+    display: none; } }
+
+.reviews__btn_phones {
+  display: none; }
+  @media screen and (max-width: 480px) {
+    .reviews__btn_phones {
+      display: flex; } }
+
 .order {
   background: url("../img/back/order.jpg") center center/cover no-repeat, url("../img/back/texture-order.png") center center/cover no-repeat;
   background-blend-mode: screen; }
