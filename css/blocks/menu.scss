@@ -65,7 +65,7 @@
 
 @each $back in (meat, vegan, diet) {
   .menu__trigger_#{$back} {
-    background: url('../../img/menu/#{$back}.jpg') center center / cover  no-repeat;
+    background: url('../img/menu/#{$back}.jpg') center center / cover  no-repeat;
   }
 }
 

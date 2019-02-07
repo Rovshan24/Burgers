@@ -88,8 +88,13 @@
 }
 
 .form__label_row {
+  flex: initial;
   flex-flow: row nowrap;
   align-items: center;
+
+  @include phones {
+    flex: 1;
+  }
 }
 
 .form__name {

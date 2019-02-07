@@ -668,7 +668,8 @@ body {
     .accordeon__desc {
       display: flex;
       flex-direction: column;
-      align-items: center; } }
+      align-items: center;
+      padding-left: 0; } }
   @media screen and (max-width: 480px) {
     .accordeon__desc {
       padding: 0 5.15625rem 0 5.15625rem; } }
@@ -691,7 +692,7 @@ body {
 
 .accordeon__text {
   line-height: 1.5rem;
-  max-width: 21.5625rem; }
+  max-width: 14.0625rem; }
 
 .accordeon__name {
   font-weight: 700; }
@@ -747,13 +748,13 @@ body {
         width: 100%; } }
 
 .menu__trigger_meat {
-  background: url("../../img/menu/meat.jpg") center center/cover no-repeat; }
+  background: url("../img/menu/meat.jpg") center center/cover no-repeat; }
 
 .menu__trigger_vegan {
-  background: url("../../img/menu/vegan.jpg") center center/cover no-repeat; }
+  background: url("../img/menu/vegan.jpg") center center/cover no-repeat; }
 
 .menu__trigger_diet {
-  background: url("../../img/menu/diet.jpg") center center/cover no-repeat; }
+  background: url("../img/menu/diet.jpg") center center/cover no-repeat; }
 
 .menu__trigger {
   position: relative;
@@ -946,8 +947,12 @@ body {
     margin-right: 0; }
 
 .form__label_row {
+  flex: initial;
   flex-flow: row nowrap;
   align-items: center; }
+  @media screen and (max-width: 480px) {
+    .form__label_row {
+      flex: 1; } }
 
 .form__name {
   margin-bottom: 0.625rem;
