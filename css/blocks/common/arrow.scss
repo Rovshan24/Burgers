@@ -2,6 +2,14 @@
   width: rem(30px);
   height: rem(15px);
   margin: 0 auto;
+
+  &_left {
+    transform: rotate(90deg);
+  }
+
+  &_right {
+    transform: rotate(-90deg);
+  }
 }
 
 .arrow__link {

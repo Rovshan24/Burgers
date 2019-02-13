@@ -20,9 +20,9 @@ body {
 /* Позиционирование и Блочная модель */
 
 .wrapper {
+  position: relative;
   overflow: hidden;
   width: 100%;
-  // min-width: 58.75rem;
   min-height: 100%;
 }
 

@@ -120,31 +120,3 @@
   line-height: rem(24px);
   font-weight: 300;
 }
-
-.close {
-  display: none;
-  position: absolute;
-  top: 30px;
-  right: 15px;
-
-  &::before, &::after {
-    display: block;
-    content: "";
-    width: 20px;
-    height: 4px;
-    background: #c1c2c2;
-    border-radius: 2px;
-  }
-
-  &::before {
-    transform: rotate(-45deg) translate(14px, 14px);
-  }
-
-  &::after {
-    transform: rotate(45deg);
-  }
-
-  @include phones {
-    display: flex;
-  }
-}

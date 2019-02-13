@@ -1,0 +1,47 @@
+.full-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(47, 50, 52, .9);
+
+  .container {
+    height: 100vh;
+    min-height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.opened {
+  display: flex;
+}
+
+.full-menu__logo {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.full-menu {
+  .nav__list {
+    flex-direction: column;
+    font-size: rem(24px);
+    font-weight: 400;
+  }
+
+  .nav__item {
+    flex-direction: column;
+
+    &::after {
+      margin: rem(25px) 0;
+    }
+  }
+}
+
+.full-menu__close {
+  display: flex;
+}

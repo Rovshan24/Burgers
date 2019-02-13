@@ -14,16 +14,21 @@ $phones: 480px;
 
 /* common */
 @import "blocks/common/button.scss";
+@import "blocks/common/logo.scss";
 @import "blocks/common/pointer.scss";
 @import "blocks/common/arrow.scss";
 @import "blocks/common/title.scss";
 @import "blocks/common/subtitle.scss";
+@import "blocks/common/close.scss";
 
 /* blocks */
+@import "blocks/full-menu.scss";
 @import "blocks/hero.scss";
 @import "blocks/nav.scss";
 @import "blocks/hamburger-menu.scss";
 @import "blocks/we.scss";
+@import "blocks/burgers.scss";
+@import "blocks/table.scss";
 @import "blocks/team.scss";
 @import "blocks/menu.scss";
 @import "blocks/reviews.scss";
