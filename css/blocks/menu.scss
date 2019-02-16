@@ -22,16 +22,13 @@
 
 .menu__list {
   display: flex;
+  justify-content: flex-end;
   height: 100%;
 }
 
 .menu__item {
   display: flex;
   height: 100%;
-
-  @include phones {
-    display: none;
-  }
 
   &_active {
 
@@ -44,20 +41,26 @@
       bottom: 0;
       z-index: 1;
     }
-
-    .menu__desc {
-      min-width: 0;
-    }
     
     .menu__subtitle {
       color: #f9b43b;
     }
-  
+    
     .menu__desc-wrap {
       width: rem(540px);
-
+      
       @include tablets {
         width: 100%;
+      }
+    }
+
+    .menu__desc {
+      min-width: 0;
+    }
+
+    .menu__close {
+      @include phones {
+        display: block;
       }
     }
   }

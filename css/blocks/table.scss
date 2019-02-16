@@ -1,18 +1,8 @@
 .table {
-  max-width: rem(320px);
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.9);
-  min-width: rem(270px);
-
   color: #2f3234;
-
-  @include tablets {
-    min-width: rem(320px);
-  }
-
-  // @include phones {
-  //   max-width: rem(220px);
-  // }
+  width: 100%;
 }
 
 .table__body {

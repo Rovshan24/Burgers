@@ -1,16 +1,23 @@
 .burgers {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   background: linear-gradient(to bottom, #f9b43b, #eb8c38, #f9b43b);
-  padding: 0 rem(45px);
 
-  @include phones {
-    padding: 0 rem(10px);
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
 .burgers__content {
+}
+
+.burgers__list {
+  display: flex;
+}
+
+.burgers__item {
   display: flex;
 
   @include tablets {
@@ -43,6 +50,12 @@
   border-radius: 5px;
   background-color: #f08c33;
 
+  &:hover {
+    .burgers__table {
+      display: block;
+    }
+  }
+
   @include tablets {
     top: -21%;
     left: 5%;
@@ -52,6 +65,7 @@
     top: -30%;
     left: -5%;
   }
+
 }
 
 .burgers-consist__link {
@@ -158,9 +172,20 @@
 }
 
 .burgers__table {
+  display: none;
+  overflow: hidden;
   position: absolute;
   left: 100%;
   top: 0;
+  width: rem(275px);
+  
+  @include tablets {
+    width: rem(320px);
+  }
+
+  @include phones {
+    min-width: rem(370px);
+  }
 
   @include tablets {
     .close {
@@ -172,11 +197,6 @@
         &::before, &::after {
           background: #eb8262;
         }
-      }
-
-      @include phones {
-        top: rem(10px);
-        right: rem(10px);
       }
     }
   }

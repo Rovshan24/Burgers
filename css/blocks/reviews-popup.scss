@@ -1,0 +1,48 @@
+.reviews-popup {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(47, 50, 52, .9);
+
+  .close__link {
+    &::before, &::after {
+      background: #eb8262;
+    }
+  }
+}
+
+.reviews-popup__content {
+  position: relative;
+  width: rem(470px);
+  height: rem(250px);
+
+  padding: rem(30px) rem(30px) rem(30px) rem(20px);
+  background: #fff;
+  border-radius: 5px;
+
+  color: #000;
+
+  .subtitle {
+    margin-bottom: rem(30px);
+  }
+
+  .reviews__text {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.reviews-popup_opened {
+  display: flex;
+}
+
+.reviews-popup__close {
+  top: 20px;
+  right: 20px;
+  display: flex;
+}

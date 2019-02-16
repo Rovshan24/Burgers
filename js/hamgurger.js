@@ -9,4 +9,3 @@ button.addEventListener('click', e => {
 close.addEventListener('click', e => {
   popup.classList.remove('opened');
 })
-

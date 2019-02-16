@@ -54,7 +54,11 @@
     }
   
     .accordeon__desc-wrap {
-      display: flex;
+      height: rem(100px);
+
+      @include tablets {
+        height: rem(210px);
+      }
     }
   }
 }
@@ -81,7 +85,9 @@
 }
 
 .accordeon__desc-wrap {
-  display: none;
+  display: block;
+  height: 0;
+  overflow: hidden;
 }
 
 .accordeon__desc {
@@ -94,10 +100,6 @@
     flex-direction: column;
     align-items: center;
     padding-left: 0;
-  }
-
-  @include phones {
-    padding: 0 rem(82.5px) 0 rem(82.5px);
   }
 }
 
@@ -123,6 +125,10 @@
 .accordeon__text {
   line-height: rem(24px);
   max-width: rem(225px);
+
+  @include tablets {
+    max-width: rem(330px);
+  }
 }
 
 .accordeon__name {
