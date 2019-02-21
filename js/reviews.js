@@ -1,13 +1,20 @@
-const reviewsButton = document.querySelectorAll('.reviews__btn_phones');
-const reviewsPopup = document.querySelector('.reviews-popup');
-const reviewsClose = document.querySelector('.reviews-popup__close');
+const reviewsItems = document.querySelectorAll('.reviews__item');
+const reviewsPopup = document.querySelector('reviews-popup');
 
-reviewsButton.addEventListener('click', e => {
-  event.preventDefault();
-  reviewsPopup.classList.add('reviews-popup_opened');
-})
+for (item of reviewsItems) {
+  item.addEventListener('click', e => {
+    const reviewsCurItem = e.currentTarget;
 
-reviewsClose.addEventListener('click', e => {
-  event.preventDefault();
-  reviewsPopup.classList.remove('reviews-popup_opened');
-})
+    if  (e.currentTarget('.reviews__btn')) {
+      reviewsPopup.classList.add('reviews-popup_opened');
+    }
+  })
+}
+
+// reviewsContent.addEventListener('click', e => {
+//   reviewsPopup.classList.add('reviews-popup_opened');
+// })
+
+// reviewsClose.addEventListener('click', e => {
+//   reviewsPopup.classList.remove('reviews-popup_opened');
+// })

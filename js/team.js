@@ -1,4 +1,5 @@
 const accoItems = document.querySelectorAll('.accordeon__item');
+const accoTrigger = document.querySelectorAll('.accordeon__trigger');
 
 for (const item of accoItems) {
   item.addEventListener('click', e => {

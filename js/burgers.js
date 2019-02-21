@@ -1,13 +1,14 @@
-const consist = document.querySelector('.burgers__consist');
-const table = document.querySelector('.burgers__table');
-const burgersClose = document.querySelector('.burgers__close');
+const consist = document.querySelectorAll('.burgers__consist');
+const table = document.querySelectorAll('.burgers__table');
+const burgersClose = document.querySelectorAll('.burgers__close');
 
-consist.addEventListener('click', e => {
-  event.preventDefault();
-  table.classList.add('burgers__table_opened');
+for (let i = 0; i < consist.length; i++) {
+  consist[i].addEventListener('click', e => {
+    e.preventDefault();
+    table[i].classList.toggle('burgers__table_opened');
+  })
+}
+
+burgersClose.addEventListener('click', e => {
+  table[i].classList.remove('burgers__table_opened');
 })
-
-// burgersClose.addEventListener('click', e => {
-//   event.preventDefault();
-//   table.classList.remove('burgers__table_opened');
-// })

@@ -16,6 +16,10 @@
   }
 }
 
+.reviews-popup_opened {
+  display: flex;
+}
+
 .reviews-popup__content {
   position: relative;
   width: rem(470px);
@@ -35,10 +39,6 @@
     max-width: 100%;
     margin: 0;
   }
-}
-
-.reviews-popup_opened {
-  display: flex;
 }
 
 .reviews-popup__close {
